@@ -13,6 +13,27 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <header class="header">
             <div class="header__logo-box">
                 <img src="./img/logo-white.png" alt="logo-white" class="header__logo">
@@ -24,7 +45,7 @@
                     <span class="heading-primary--sub">where life happens</span>
                 </h1>
 
-                <a href="#" class="btn btn--white btn--animated">discover our tour</a>
+                <a href="#section-tours" class="btn btn--white btn--animated">discover our tour</a>
             </div>
         </header>
 
@@ -109,7 +130,7 @@
                 </div>  
             </section>
 
-            <section class="section-tours">
+            <section class="section-tours" id="section-tours">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
                         most popular tours
@@ -144,7 +165,7 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">279 $</p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +197,7 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">379 $</p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +229,7 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">579 $</p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -320,6 +341,51 @@
                 </div>
             </section>
         </main>
+
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <img src="/img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="footer__copyright">
+                        <p class="footer__copyright-paragraph">
+                            Built my <a href="#" class="footer__link">45KANYOTHA.DESIGN</a> for additional knowledges <a href="#" class="footer__link">45KANYOTHA</a>. Copyright &copy; by Oti Design. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Oti Design, is of course highly appreciated! 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="/img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                    <img src="/img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <p class="popup__text">
+                        Lorem ipsum dolor vel dolor gravida gravida. In ullamcorper metus sed condimentum fermentum. Nunc eget mi faucibus, iaculis libero a, scelerisque dui. Aenean vitae sagittis massa. Proin a felis quis mi efficitur vehicula. Nulla posuere leo a risus tincidunt, sed venenatis odio finibus. Curabitur nec laoreet nunc. In imperdiet eu justo ut consectetur. Nulla elementum quam ut arcu efficitur, a vulputate massa sagittis. Praesent maximus ultricies eleifend. Nunc eget iaculis augue, sed aliquet neque. Aenean nulla felis, porttitor euismod erat non, ornare placerat nulla. Aliquam erat volutpat. Praesent et orci vestibulum, congue ipsum vel, fermentum est. Donec finibus nisl vel dui mattis, at auctor ex finibus.
+                        Nullam mi massa, finibus quis arcu at, vulputate finibus ligula. Sed congue purus eget vehicula pretium. Nam maximus egestas nibh, at varius est placerat non. Fusce sed sapien diam. Maecenas pharetra, neque maximus porttitor aliquam, orci metus commodo nibh, in tempor lectus tortor non diam. Nunc auctor libero sed mollis consequat. Praesent sit amet arcu pharetra, pharetra massa sed, pulvinar orci. Fusce eget metus at dui commodo hendrerit.                    </p>
+                    <a href="#" class="btn btn--green">Book now</a>
+                </div>
+            </div>
+        </div>
 
 
         <!--
