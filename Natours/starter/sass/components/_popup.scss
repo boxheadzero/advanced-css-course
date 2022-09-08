@@ -25,11 +25,42 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.5);
         transition: all .5s .2s;
+        
+        @include respond(tab-land) {
+            display: block;
+            width: 60%;
+            height: 90vh;
+        }
+        
+        @include respond(tab-port) {
+            width: 80%;
+        }
+
+        @include respond(phone) {
+            overflow: auto;
+        }
     }
       
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        
+        @include respond(tab-land) {
+            display: block;
+            float: top;
+            height: 35%;
+            width: 100%;
+            position: relative;
+        }
+        
+        @include respond(tab-port) {
+            height: 40%;
+        }
+
+        @include respond(phone) {
+            height: 70%;
+        }
     }
 
     &__right {
@@ -37,11 +68,48 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-land) {
+            display: block;
+            width: 100%;
+            padding: 2rem 3rem;
+            text-align: center;
+        }
     }
     
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-land) {
+            width: 50%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+        &-1 {
+            @include respond(tab-land) {
+                top: 0;
+                left: 0;
+                position: absolute;
+            }
+        }
+
+        &-2 {
+            @include respond(tab-land) {
+                top: 0;
+                right: 0;
+                position: absolute;
+            }
+
+            @include respond(phone) {
+                left: 0;
+                top: 26rem;
+            }
+        }
+
     }
 
     &__text {
@@ -60,6 +128,16 @@
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         -ms-hyphens: auto;
+
+        
+        @include respond(tab-land) {
+            font-size: 1.2rem;
+        }
+
+        @include respond(tab-port) {
+            column-count: 1;
+            font-size: 1.5rem;
+        }
 
     }
 
