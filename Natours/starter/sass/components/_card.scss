@@ -68,24 +68,32 @@
 
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
+        @media (min-resolution: 192dpi) and (min-width: 37.25em),
+        (min-width: 125em) {
+            height: 30rem;
+        }
+
         &--1 {
-            background-image: linear-gradient(to right bottom,
-            $color-secondary-light,
-            $color-secondary-dark),
+            background-image: linear-gradient(
+                to right bottom,
+                $color-secondary-light,
+                $color-secondary-dark),
             url(/img/nat-5.jpg);
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom,
-            $color-primary-light,
-            $color-primary-dark),
+            background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark),
             url(/img/nat-6.jpg);
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom,
-            $color-tertiary-light,
-            $color-tertiary-dark),
+            background-image: linear-gradient(
+                to right bottom,
+                $color-tertiary-light,
+                $color-tertiary-dark),
             url(/img/nat-7.jpg);
         }
     }
@@ -108,21 +116,24 @@
         -webkit-box-decoration-break: clone;
         
         &--1 {
-            background-image: linear-gradient(to right bottom,
-            rgba($color-secondary-light, .85),
-            rgba($color-secondary-dark, .85));
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-secondary-light, .85),
+                rgba($color-secondary-dark, .85));
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom,
-            rgba($color-primary-light, .85),
-            rgba($color-primary-dark, .85));
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, .85),
+                rgba($color-primary-dark, .85));
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom,
-            rgba($color-tertiary-light, .85),
-            rgba($color-tertiary-dark, .85));
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-tertiary-light, .85),
+                rgba($color-tertiary-dark, .85));
         }
     }
 
@@ -174,7 +185,9 @@
     }
 }
 
-@include respond(tab-port) {
+// @include respond(tab-port) {
+@media only screen and (max-width: 56.25em),
+       only screen and (hover: none) {
     .card {
         height: auto;
         border-radius: 3px;

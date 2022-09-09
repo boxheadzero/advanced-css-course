@@ -12,6 +12,15 @@
     visibility: hidden;
     transition: all .3s;
 
+    @supports (backdrop-filter: blur(10px)) or
+              (-webkit-backdrop-filter: blur(10px)) or
+              (-ms-backdrop-filter: blur(10px)) {
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                -ms-backdrop-filter: blur(10px);
+                background-color: rgba($color-black, .2);
+              }
+
     &__content {
         @include absCenter;
         
@@ -30,14 +39,11 @@
             display: block;
             width: 60%;
             height: 90vh;
+            overflow: auto;
         }
         
         @include respond(tab-port) {
             width: 80%;
-        }
-
-        @include respond(phone) {
-            overflow: auto;
         }
     }
       
@@ -45,21 +51,9 @@
         width: 33.333333%;
         display: table-cell;
 
-        
         @include respond(tab-land) {
             display: block;
-            float: top;
-            height: 35%;
             width: 100%;
-            position: relative;
-        }
-        
-        @include respond(tab-port) {
-            height: 40%;
-        }
-
-        @include respond(phone) {
-            height: 70%;
         }
     }
 
@@ -72,8 +66,12 @@
         @include respond(tab-land) {
             display: block;
             width: 100%;
-            padding: 2rem 3rem;
+            padding: 5rem 3rem;
             text-align: center;
+        }
+
+        @include respond(tab-port) {
+            padding: 5rem 3rem;
         }
     }
     
@@ -82,34 +80,8 @@
         width: 100%;
 
         @include respond(tab-land) {
-            width: 50%;
-        }
-
-        @include respond(phone) {
             width: 100%;
         }
-
-        &-1 {
-            @include respond(tab-land) {
-                top: 0;
-                left: 0;
-                position: absolute;
-            }
-        }
-
-        &-2 {
-            @include respond(tab-land) {
-                top: 0;
-                right: 0;
-                position: absolute;
-            }
-
-            @include respond(phone) {
-                left: 0;
-                top: 26rem;
-            }
-        }
-
     }
 
     &__text {
@@ -131,12 +103,18 @@
 
         
         @include respond(tab-land) {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
         }
 
         @include respond(tab-port) {
-            column-count: 1;
-            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        @include respond(phone) {
+            column-count: auto;
+
         }
 
     }
@@ -164,11 +142,23 @@
             display: inline-block;
             line-height: 1rem;
             transition: all .2s;
+
+            @include respond(tab-land) {
+                background-color: $color-grey-dark;
+                padding: 3px;
+                border-radius: 50%;
+                color: $color-grey-light-2;
+                top: 2rem;
+                right: 2rem;
+                font-size: 3rem;
+                display: inline-block;
+                line-height: 1.5rem;
+            }
         }
 
         &:hover {
             color: $color-primary;
         }
-    }
 
+    }
 }
